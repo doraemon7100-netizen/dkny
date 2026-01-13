@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEONGRIM K-POP DANCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --point-color: #ff2d55; /* 에너제틱한 레드-핑크 */
+            --bg-dark: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-light: #f5f5f5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* 헤더 네비게이션 */
+        header {
+            position: fixed; top: 0; width: 100%; padding: 20px 50px;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--point-color); }
+        nav a { color: white; text-decoration: none; margin-left: 30px; font-size: 0.9rem; }
+
+        /* 히어로 섹션 */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1535525153412-5a42439a210d?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 0 20px;
+        }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #ccc; }
+        .btn-main {
+            padding: 15px 40px; background: var(--point-color); color: white;
+            text-decoration: none; border-radius: 50px; font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-main:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,45,85,0.6); }
+
+        /* 클래스 소개 섹션 */
+        .section { padding: 100px 10%; text-align: center; }
+        .section-title { font-size: 2.5rem; margin-bottom: 50px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card {
+            background: var(--card-bg); padding: 40px; border-radius: 20px;
+            transition: 0.3s; border: 1px solid #333;
+        }
+        .card:hover { border-color: var(--point-color); transform: translateY(-10px); }
+        .card h3 { color: var(--point-color); margin-bottom: 15px; }
+
+        /* 인테리어/공간 섹션 */
+        .space-info { background: #111; display: flex; flex-wrap: wrap; align-items: center; }
+        .space-text { flex: 1; padding: 50px; min-width: 300px; }
+        .space-img { flex: 1; min-width: 300px; height: 400px; 
+                     background: url('https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&q=80&w=800') center/cover; }
+
+        /* 문의 폼 */
+        .contact-form { max-width: 600px; margin: 0 auto; background: var(--card-bg); padding: 40px; border-radius: 20px; }
+        input, textarea { 
+            width: 100%; padding: 15px; margin-bottom: 20px; 
+            background: #222; border: 1px solid #444; color: white; border-radius: 8px;
+        }
+        .submit-btn { width: 100%; padding: 15px; background: var(--point-color); border: none; color: white; font-weight: bold; cursor: pointer; }
+
+        footer { padding: 50px; text-align: center; border-top: 1px solid #333; font-size: 0.8rem; color: #666; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            header { padding: 20px; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">CHEONGRIM DANCE</div>
+        <nav>
+            <a href="#about">아카데미 소개</a>
+            <a href="#classes">클래스</a>
+            <a href="#space">시설 안내</a>
+            <a href="#contact">수강 문의</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>BEYOND YOUR LIMITS</h1>
+        <p>청림 K-POP 댄스 아카데미에서 당신의 잠재력을 깨우세요.</p>
+        <a href="#contact" class="btn-main">무료 체험 상담 신청</a>
+    </section>
+
+    <section id="classes" class="section">
+        <h2 class="section-title">OUR CLASSES</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>K-POP Basic</h3>
+                <p>입문자를 위한 기초 스텝과 리듬 트레이닝. 남녀노소 누구나 즐겁게 시작할 수 있습니다.</p>
+            </div>
+            <div class="card">
+                <h3>Idol Performance</h3>
+                <p>최신 유행하는 아이돌 안무의 디테일과 표현력을 완성하는 실전 마스터 클래스.</p>
+            </div>
+            <div class="card">
+                <h3>Audition Prep</h3>
+                <p>기획사 오디션을 준비하는 지망생을 위한 개별 맞춤형 안무 피드백 및 영상 촬영.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="space" class="space-info">
+        <div class="space-text">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">PREMIUM SPACE</h2>
+            <p>인테리어 전문가가 설계한 쾌적한 연습 환경을 제공합니다. 
+            관절 보호를 위한 <b>전문 탄성 마루</b>와 <b>전면 고화질 거울</b>, 
+            그리고 몰입감을 극대화하는 <b>서라운드 사운드 시스템</b>을 경험하세요.</p>
+        </div>
+        <div class="space-img"></div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">GET IN TOUCH</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="이름" required>
+                <input type="tel" placeholder="연락처" required>
+                <textarea rows="5" placeholder="궁금하신 사항을 남겨주세요"></textarea>
+                <button type="submit" class="submit-btn">상담 예약하기</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Cheongrim Church Academy. All Rights Reserved.</p>
+        <p>서울특별시 XX구 XX로 123 | 문의: 02-1234-5678</p>
+    </footer>
+
+</body>
+</html>
